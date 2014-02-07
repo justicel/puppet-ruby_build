@@ -43,7 +43,8 @@ class ruby_build {
     command   => "git clone \
                   ${ruby_build::params::repo_path} \
                   ${ruby_build::params::repo_name}",
-    creates   => $ruby_build::params::install_dir
+    creates   => $ruby_build::params::install_dir,
+    path      => ['/usr/bin', '/usr/sbin', '/sbin', '/bin'],
   }
 
 }
