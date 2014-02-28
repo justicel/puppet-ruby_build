@@ -35,7 +35,7 @@ define ruby_build::resource::ruby(
 
   exec { "rbenv install ${ruby_name}":
     command     => "${build_exe} ${ruby_name} ${ruby_prefix}",
-    creates     => "${ruby_prefix}/bin/ruby"
+    creates     => "${ruby_prefix}/bin/ruby",
     timeout     => 1800,
   }
 
